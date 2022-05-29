@@ -9,8 +9,8 @@ which in my opinion is the most important parts of the bank, that should be test
 ## Parts to test
 ### Transfer money between accounts
 #### What could go wrong?
-- Money doesn't withdraw from account. Method MakeTransfer() in Account.
-- Money doesn't go to the other account. Method MakeTransfer() in Account.
+- Money doesn't withdraw from account. Method InternalTransfer() and ExternalTRansfer() in Bank class.
+- Money doesn't go to the other account. Method InternalTransfer() and ExternalTRansfer() in Bank class.
 - More money are transfered than what's available in the account. Method EnoughBalance() in Account.
 
 ### Withdraw money
