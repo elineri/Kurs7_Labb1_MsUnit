@@ -3,7 +3,7 @@
 ## INTRODUCTION
 This is a school assignment to create unit tests for a previous group assignment where we created a fictional bank. I have identified three parts of the code that are critical to the bank and that should be tested.
 
-## Parts to test
+## PARTS TO TEST
 ### Transfer money between accounts
 #### What could go wrong?
 - Money doesn't withdraw from account. Method InternalTransfer() and ExternalTRansfer() in Bank class.
