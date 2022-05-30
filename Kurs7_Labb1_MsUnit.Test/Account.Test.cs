@@ -46,7 +46,7 @@ namespace Kurs7_Labb1_MsUnit.Test
         [Description("This test is to check that more money than what's available in the account can't be withdrawn")]
         [Owner("Elin Ericstam")]
         [TestCategory("Withdrawal")]
-        public void EnoughBalance_1000m_Return_False()
+        public void EnoughBalance_Withdraw_1000m_Return_False()
         {
             // Arrange
             Account testAccount = new Account("Test", "Test Account", "123456789", 1000m, "SEK", "444444");
@@ -56,6 +56,22 @@ namespace Kurs7_Labb1_MsUnit.Test
 
             // Assert
             Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        [Description("This test is to check that money are withdraw if there is enough balance in the account")]
+        [Owner("Elin Ericstam")]
+        [TestCategory("Withdrawal")]
+        public void EnoughBalance_Withdraw_100m_Return_True()
+        {
+            // Arrange
+            Account testAccount = new Account("Test", "Test Account", "123456789", 1000m, "SEK", "444444");
+
+            // Act
+            var result = testAccount.EnoughBalance(100m);
+
+            // Assert
+            Assert.IsTrue(result);
         }
 
         [TestMethod]
@@ -192,7 +208,7 @@ namespace Kurs7_Labb1_MsUnit.Test
         }
 
         [TestMethod]
-        [Description("This test checks that the given user is returned when the correct password is matching with " +
+        [Description("This test checks that the given user is returned when the correct password which is matching with " +
             "the user when trying to log in.")]
         [Owner("Elin Ericstam")]
         [TestCategory("Login")]
