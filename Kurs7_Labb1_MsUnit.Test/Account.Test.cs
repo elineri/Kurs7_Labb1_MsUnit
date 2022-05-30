@@ -46,7 +46,7 @@ namespace Kurs7_Labb1_MsUnit.Test
         [Description("This test is to check that more money than what's available in the account can't be withdrawn")]
         [Owner("Elin Ericstam")]
         [TestCategory("Withdrawal")]
-        public void EnoughBalance_Withdraw_1000m_Return_False()
+        public void EnoughBalance_Withdraw_1000_Return_False()
         {
             // Arrange
             Account testAccount = new Account("Test", "Test Account", "123456789", 1000m, "SEK", "444444");
@@ -62,7 +62,7 @@ namespace Kurs7_Labb1_MsUnit.Test
         [Description("This test is to check that money are withdraw if there is enough balance in the account")]
         [Owner("Elin Ericstam")]
         [TestCategory("Withdrawal")]
-        public void EnoughBalance_Withdraw_100m_Return_True()
+        public void EnoughBalance_Withdraw_100_Return_True()
         {
             // Arrange
             Account testAccount = new Account("Test", "Test Account", "123456789", 1000m, "SEK", "444444");
@@ -78,7 +78,7 @@ namespace Kurs7_Labb1_MsUnit.Test
         [Description("This test checks that money is added to the new account when making a transfer")]
         [Owner("Elin Ericstam")]
         [TestCategory("Transfer money")]
-        public void MakeTransfer_100_testAccountTo_Return_1100m()
+        public void MakeTransfer_TransferSum_100_Return_testAccountToBalance_1100m()
         {
             // Arrange
             Account testAccountFrom = new Account("Test", "Test Account", "123456789", 1000m, "SEK", "444444");
@@ -97,7 +97,7 @@ namespace Kurs7_Labb1_MsUnit.Test
         [Description("This test checks that money is withdrawn from the account when making a transfer")]
         [Owner("Elin Ericstam")]
         [TestCategory("Transfer money")]
-        public void MakeTransfer_100_testAccountFrom_Return_900m()
+        public void MakeTransfer_TransferSum_100_Return_testAccountFromBalance_900m()
         {
             // Arrange
             Account testAccountFrom = new Account("Test", "Test Account", "123456789", 1000m, "SEK", "444444");
@@ -117,7 +117,7 @@ namespace Kurs7_Labb1_MsUnit.Test
         [Owner("Elin Ericstam")]
         [TestCategory("Transfer money externally")]
         [Ignore]
-        public void MakeExternalTransfer_100_testAccountTo_Return_1500m()
+        public void MakeExternalTransfer_TransferSum_100_Return_testAccountToBalance_1500m()
         {
             // Arrange
             Account testAccountFrom = new Account("Test", "Test Account", "123456789", 1000m, "SEK", "444444");
@@ -136,7 +136,7 @@ namespace Kurs7_Labb1_MsUnit.Test
         [Description("This test checks that money is withdrawn from the account when making an external transfer")]
         [Owner("Elin Ericstam")]
         [TestCategory("Transfer money externally")]
-        public void MakeExternalTransfer_500_testAccountFrom_Return_500m()
+        public void MakeExternalTransfer_TransferSum_500_Return_testAccountToBalance_500m()
         {
             // Arrange
             Account testAccountFrom = new Account("Test", "Test Account", "123456789", 1000m, "SEK", "444444");
@@ -192,7 +192,7 @@ namespace Kurs7_Labb1_MsUnit.Test
             " in the system.")]
         [Owner("Elin Ericstam")]
         [TestCategory("Login")]
-        public void CheckPassword_Password_Password122_Return_Null()
+        public void CheckPassword_UserId_123456_And_Password_Password122_Return_Null()
         {
             // Arrange
             Customer testCustomer = new Customer("123456", "Elin Test", "Password123");
@@ -212,7 +212,7 @@ namespace Kurs7_Labb1_MsUnit.Test
             "the user when trying to log in.")]
         [Owner("Elin Ericstam")]
         [TestCategory("Login")]
-        public void CheckPassword_Password_Password123_Return_testCustomer()
+        public void CheckPassword_UserId_123456_And_Password_Password123_Return_testCustomer()
         {
             // Arrange
             Customer testCustomer = new Customer("123456", "Elin Test", "Password123");
