@@ -95,5 +95,43 @@ namespace Kurs7_Labb1_MsUnit.Test
             // Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        [Description("This test checks that money is added to the new account when making an external transfer")]
+        [Owner("Elin Ericstam")]
+        [TestCategory("Transfer money")]
+        public void MakeTransfer_100_testAccountTo_Return_1500m()
+        {
+            // Arrange
+            Account testAccountFrom = new Account("Test", "Test Account", "123456789", 1000m, "SEK", "444444");
+            Account testAccountTo = new Account("Test", "Test Account", "123456789", 1000m, "SEK", "444444");
+            var expected = 1500m;
+
+            // Act
+            testAccountFrom.MakeTransfer(500m, testAccountTo);
+            var actual = testAccountTo._balance;
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        [Description("This test checks that money is withdrawn from the account when making an external transfer")]
+        [Owner("Elin Ericstam")]
+        [TestCategory("Transfer money")]
+        public void MakeExternalTransfer_500_testAccountFrom_Return_500m()
+        {
+            // Arrange
+            Account testAccountFrom = new Account("Test", "Test Account", "123456789", 1000m, "SEK", "444444");
+            Account testAccountTo = new Account("Test", "Test Account", "123456789", 1000m, "SEK", "444444");
+            var expected = 500m;
+
+            // Act
+            testAccountFrom.MakeExternalTransfer(500m, testAccountTo);
+            var actual = testAccountFrom._balance;
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
