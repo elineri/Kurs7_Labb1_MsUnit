@@ -1,8 +1,7 @@
 # Kurs7 Systemtestning, Labb1  - MsUnit
 
 ## INTRODUCTION
-This is a school assignment to create unit tests for a previous group assignment where we created a fictional bank. I have identified three parts of the code, 
-which in my opinion is the most important parts of the bank, that should be tested.
+This is a school assignment to create unit tests for a previous group assignment where we created a fictional bank. I have identified three parts of the code that are critical to the bank and that should be tested.
 
 ## TABLE OF CONTENTS
 
