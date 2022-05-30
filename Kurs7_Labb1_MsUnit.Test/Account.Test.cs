@@ -16,7 +16,7 @@ namespace Kurs7_Labb1_MsUnit.Test
         //{
         //    // Arrange
         //    Customer testCustomer = new Customer("444444", "Gillian Brown", "password") {};
-            
+
 
         //    // Act
         //    Bank.Withdraw(testCustomer);
@@ -43,17 +43,54 @@ namespace Kurs7_Labb1_MsUnit.Test
         //}
 
         [TestMethod]
-        [Description("This test is to check that ")]
+        [Description("This test is to check that more money than what's available in the account can't be withdrawn")]
         [Owner("Elin Ericstam")]
         [TestCategory("Withdrawal")]
         public void EnoughBalance_1000m_Return_False()
         {
             // Arrange
-            Account testAccount = new Account("Test", "Test Account", "123456789", 1000m, "SEK", "444444") {};
-            var expected = false;
+            Account testAccount = new Account("Test", "Test Account", "123456789", 1000m, "SEK", "444444");
 
             // Act
-            var actual = testAccount.EnoughBalance(1001m);
+            var result = testAccount.EnoughBalance(1001m);
+
+            // Assert
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        [Description("This test checks that money is added to the new account when making a transfer")]
+        [Owner("Elin Ericstam")]
+        [TestCategory("Transfer money")]
+        public void MakeTransfer_100_testAccountTo_Return_1100m()
+        {
+            // Arrange
+            Account testAccountFrom = new Account("Test", "Test Account", "123456789", 1000m, "SEK", "444444");
+            Account testAccountTo = new Account("Test", "Test Account", "123456789", 1000m, "SEK", "444444");
+            var expected = 1100m;
+
+            // Act
+            testAccountFrom.MakeTransfer(100m, testAccountTo);
+            var actual = testAccountTo._balance;
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        [Description("This test checks that money is withdrawn from the account when making a transfer")]
+        [Owner("Elin Ericstam")]
+        [TestCategory("Transfer money")]
+        public void MakeTransfer_100_testAccountFrom_Return_900m()
+        {
+            // Arrange
+            Account testAccountFrom = new Account("Test", "Test Account", "123456789", 1000m, "SEK", "444444");
+            Account testAccountTo = new Account("Test", "Test Account", "123456789", 1000m, "SEK", "444444");
+            var expected = 900m;
+
+            // Act
+            testAccountFrom.MakeTransfer(100m, testAccountTo);
+            var actual = testAccountFrom._balance;
 
             // Assert
             Assert.AreEqual(expected, actual);

@@ -12,7 +12,7 @@ namespace Kurs7_Labb1_MsUnit
 
         private string _accountType = "New Account";
         private string _accountName = "Konto";
-        private decimal _balance;
+        public decimal _balance;
         internal decimal Balance
         {
             set
