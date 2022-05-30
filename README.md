@@ -6,8 +6,8 @@ This is a school assignment to create unit tests for a previous group assignment
 ## PARTS TO TEST
 ### Transfer money between accounts
 #### What could go wrong?
-- Money doesn't withdraw from account. Method InternalTransfer() and ExternalTRansfer() in Bank class.
-- Money doesn't go to the other account. Method InternalTransfer() and ExternalTRansfer() in Bank class.
+- Money doesn't withdraw from account. Method InternalTransfer() and ExternalTransfer() in Bank class.
+- Money doesn't go to the other account. Method InternalTransfer() and ExternalTransfer() in Bank class.
 - More money are transfered than what's available in the account. Method EnoughBalance() in Account.
 
 ### Withdraw money
