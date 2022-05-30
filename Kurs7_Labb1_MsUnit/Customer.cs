@@ -6,7 +6,7 @@ using Art = Kurs7_Labb1_MsUnit.HamsterArt;
 
 namespace Kurs7_Labb1_MsUnit
 {
-    class Customer : User
+    public class Customer : User
     {
         internal List<Account> _accounts = new List<Account>();
         public Customer(string UserId, string FullName, string Password)

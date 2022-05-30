@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 
 namespace Kurs7_Labb1_MsUnit
 {
-    abstract class User
+    public abstract class User
     {
         protected string _userId;
         protected string _fullName;

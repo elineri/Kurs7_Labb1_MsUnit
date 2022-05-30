@@ -53,7 +53,7 @@ namespace Kurs7_Labb1_MsUnit.Test
             var expected = false;
 
             // Act
-            var actual = testAccount.EnoughBalance(1000m);
+            var actual = testAccount.EnoughBalance(1001m);
 
             // Assert
             Assert.AreEqual(expected, actual);
