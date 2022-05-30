@@ -6,7 +6,7 @@ using System.Globalization;
 
 namespace Kurs7_Labb1_MsUnit
 {
-    class Account
+    public class Account
     {
         private List<string[]> _transaction = new List<string[]>();
 
