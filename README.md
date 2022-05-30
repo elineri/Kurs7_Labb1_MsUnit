@@ -15,6 +15,8 @@ This is a school assignment to create unit tests for a previous group assignment
 - More money are withdrawn than what's available in the account. Method EnoughBalance() in Account.
 - Money doesn't withdraw from account. Method Withdraw() in Bank.
 
-### Deposit money
+### Log in
 #### What could go wrong?
-- Money isn't deposited to account. Method Deposit() in Bank.
+- A user can log in even though it doesn't exist in the system. Method CheckUserName() in User.
+- The system can't find the user even though it exists in the system. Method CheckUserName() in User.
+- A user can log in with incorrect password.
