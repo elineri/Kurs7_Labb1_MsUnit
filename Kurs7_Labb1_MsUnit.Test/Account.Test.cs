@@ -8,40 +8,6 @@ namespace Kurs7_Labb1_MsUnit.Test
     [TestClass]
     public class UnitTest1
     {
-        //[TestMethod]
-        //[Description("This test is about checking that the method doesn't withdraw money when there aren't enought balance in the account.")]
-        //[Owner("Elin Ericstam")]
-        //[TestCategory("Withdraw money")]
-        //public void Withdraw_Customer_444444_Return_X()
-        //{
-        //    // Arrange
-        //    Customer testCustomer = new Customer("444444", "Gillian Brown", "password") {};
-
-
-        //    // Act
-        //    Bank.Withdraw(testCustomer);
-
-        //    // Assert
-        //}
-
-        //[TestMethod]
-        //[Description("")]
-        //[Owner("Elin Ericstam")]
-        //[TestCategory("Login")]
-        //public void Login_User_444444_Password_password_Return_True()
-        //{
-        //    // Arrange
-        //    string testUser = "444444";
-        //    string testPassword = "password";
-        //    bool expected = true;
-
-        //    // Act
-        //    var actual = Bank.Login(testUser, testPassword);
-
-        //    // Assert
-        //    Assert.AreEqual(expected, actual);
-        //}
-
         [TestMethod]
         [Description("This test is to check that more money than what's available in the account can't be withdrawn")]
         [Owner("Elin Ericstam")]
@@ -116,7 +82,6 @@ namespace Kurs7_Labb1_MsUnit.Test
         [Description("This test checks that money is added to the new account when making an external transfer")]
         [Owner("Elin Ericstam")]
         [TestCategory("Transfer money externally")]
-        [Ignore]
         public void MakeExternalTransfer_TransferSum_100_Return_testAccountToBalance_1500m()
         {
             // Arrange
@@ -126,7 +91,7 @@ namespace Kurs7_Labb1_MsUnit.Test
 
             // Act
             testAccountFrom.MakeExternalTransfer(500m, testAccountTo);
-            var actual = testAccountTo._balance; // TODO: Delay in transfer
+            var actual = testAccountTo._balance; 
 
             // Assert
             Assert.AreEqual(expected, actual);
@@ -188,7 +153,7 @@ namespace Kurs7_Labb1_MsUnit.Test
         }
 
         [TestMethod]
-        [Description("This test checks that null is returned when password is incorrect even though the user exists" +
+        [Description("This test checks that null is returned (can't log in) when password is incorrect even though the user exists" +
             " in the system.")]
         [Owner("Elin Ericstam")]
         [TestCategory("Login")]
@@ -208,7 +173,7 @@ namespace Kurs7_Labb1_MsUnit.Test
         }
 
         [TestMethod]
-        [Description("This test checks that the given user is returned when the correct password which is matching with " +
+        [Description("This test checks that the given user is returned (can log in) when the correct password which is matching with " +
             "the user when trying to log in.")]
         [Owner("Elin Ericstam")]
         [TestCategory("Login")]

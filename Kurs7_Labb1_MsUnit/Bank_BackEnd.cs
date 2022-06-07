@@ -52,16 +52,16 @@ namespace Kurs7_Labb1_MsUnit
 
             return response.ToString();
         }
-        static void OnTimedEvent(Object source, ElapsedEventArgs e)
-        {
-            foreach (Task task in UpcomingTransactions)
-            {
-                task.Start();
-            }
-            UpcomingTransactions.Clear();
-            StoreAndLoad.SaveAccounts();
-            StoreAndLoad.SaveTransactions();
-        }
+        //static void OnTimedEvent(Object source, ElapsedEventArgs e)
+        //{
+        //    foreach (Task task in UpcomingTransactions)
+        //    {
+        //        task.Start();
+        //    }
+        //    UpcomingTransactions.Clear();
+        //    StoreAndLoad.SaveAccounts();
+        //    StoreAndLoad.SaveTransactions();
+        //}
         internal static void PrintCurrentExchange()
         {
             Art.HeadLine("\n\tAktuell valutakurs för Svenska kronor (SEK) \n\n");
@@ -75,15 +75,15 @@ namespace Kurs7_Labb1_MsUnit
                                              $"    {Account.CurrencyList[i][1]}\n");
             }
         }
-        internal static void TransactionProcessTimer()
-        {
-            // Create a timer with a two second interval.
-            aTimer = new System.Timers.Timer(900000);
-            // Hook up the Elapsed event for the timer. 
-            aTimer.Elapsed += OnTimedEvent;
-            aTimer.AutoReset = true;
-            aTimer.Enabled = true;
-        }
+        //internal static void TransactionProcessTimer()
+        //{
+        //    // Create a timer with a two second interval.
+        //    aTimer = new System.Timers.Timer(900000);
+        //    // Hook up the Elapsed event for the timer. 
+        //    aTimer.Elapsed += OnTimedEvent;
+        //    aTimer.AutoReset = true;
+        //    aTimer.Enabled = true;
+        //}
         static async void UpdateEchangeRates()
         {
             string updateDate = string.Empty;

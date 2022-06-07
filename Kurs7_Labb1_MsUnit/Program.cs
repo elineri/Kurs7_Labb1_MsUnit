@@ -7,7 +7,7 @@ namespace Kurs7_Labb1_MsUnit
         static void Main(string[] args)
         {
             HamsterArt.HamsterWelcome();
-            Bank.TransactionProcessTimer();
+            //Bank.TransactionProcessTimer(); 
             StoreAndLoad.LoadTransactions();
             StoreAndLoad.LoadAccounts();
             StoreAndLoad.LoadUsers();

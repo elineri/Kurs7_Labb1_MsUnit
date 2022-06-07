@@ -202,11 +202,11 @@ namespace Kurs7_Labb1_MsUnit
             this._balance -= transferSum;
             Bank.ExchangeCurrency(ref transferSum, ref _currency);
             Bank.ExchangeBack(ref transferSum, ref toAccount._currency);
-            Bank.UpcomingTransactions.Add(new Task(() =>
-            {
+            //Bank.UpcomingTransactions.Add(new Task(() =>
+            //{
                 toAccount._balance += transferSum;
 
-            }));
+            //}));
 
         }
         public static void PrintCurrencies() // Prints available currencies in the bank
