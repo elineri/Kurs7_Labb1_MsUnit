@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace Kurs7_Labb1_MsUnit.Test
 {
     [TestClass]
-    public class UnitTest2
+    public class UserTest
     {
         [TestMethod]
         [Description("This test checks that a user can't log in if the userID doesn't exist in the system")]
@@ -78,7 +78,6 @@ namespace Kurs7_Labb1_MsUnit.Test
             var expected = testCustomer;
 
             // Act
-
             var actual = User.CheckPassword(testUsers, "123456", "Password123");
 
             // Assert

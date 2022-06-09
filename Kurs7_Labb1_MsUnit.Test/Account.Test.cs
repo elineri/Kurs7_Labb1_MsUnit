@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace Kurs7_Labb1_MsUnit.Test
 {
     [TestClass]
-    public class UnitTest1
+    public class AccountTest
     {
         [TestMethod]
         [Description("This test is to check that more money than what's available in the account can't be withdrawn")]
